@@ -1,5 +1,6 @@
 const casper = require('casper').create();
 const moment = require('moment');
+const fs = require('fs');
 
 const BASE_URL = "https://torgi.gov.ru";
 // const today = moment().format('DD.MM.YYYY');
@@ -9,6 +10,7 @@ casper.options.waitTimeout = 45000;
 
 // for all targets
 // get company inn
+const companyId = 6;
 const categoryId = 8; // Продажа государственного и муниципального имущества
 const inn = "2308171570";
 var auctions = [];
@@ -46,12 +48,23 @@ casper.then(function() {
 	}
 });
 
-// save auctions to DB
+// save auctions to auctions.json
 casper.then(function() {
-	console.log(auctions.length);
+	for(var j = 0; j < auctions.length; j++) {
+		auctions[j].companyId = companyId;
+		auctions[j].categoryId = categoryId;
+	}
+	fs.write("./auctions.json", JSON.stringify(auctions), 'w');
 });
 
+// run script that saves auctions from auctions.json to db
+casper.waitForExec("node", ["save_to_db.js"], function(resp){}, function(timeout, resp){});
+
 // send emails
+
+casper.then(function() {
+	this.echo("finished");
+});
 
 casper.run();
 

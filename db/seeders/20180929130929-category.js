@@ -21,10 +21,8 @@ module.exports = {
 			{ id: 16, name: 'Продажа объектов электроэнергетики' },
 			{ id: 17, name: 'Лицензии на оказание услуг связи' }
 		],{});
-		
 	},
 	down: (queryInterface, Sequelize) => {
 		return queryInterface.bulkDelete('Categories', null, {});
-		
 	}
 };
