@@ -1,4 +1,5 @@
 auctions.json
 db/config/config.js
+env.js
 last.png
 node_modules

@@ -7,6 +7,7 @@
     "casperjs": "^1.1.4",
     "moment": "^2.22.2",
     "mysql2": "^1.6.1",
+    "nodemailer": "^4.6.8",
     "sequelize": "^4.39.0",
     "sequelize-cli": "^4.1.1"
   },

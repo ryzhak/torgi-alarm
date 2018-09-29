@@ -1,5 +1,13 @@
 - deploy with db(db:migrate, db:seed)
-- install phantomjs?
+- install phantomjs globally
+- add env.js
+module.exports = {
+	EMAIL_HOST: "smtp.yandex.ru",
+	EMAIL_USERNAME: "spektr-shop-helper@yandex.ru",
+	EMAIL_PASSWORD: "123574896a",
+	EMAIL_TARGET: "spektr-shop@yandex.ru"
+};
+
 - how to use
 - tests
 - run with casperjs run.js
@@ -28,3 +36,9 @@ module.exports = {
     dialect: "mysql"
   }
 };
+
+TODO:
+- send email before save
+- add log
+- add loop of target to run.js
+- update readme
