@@ -1,0 +1,17 @@
+{
+  "name": "torgi-alarm",
+  "version": "1.0.0",
+  "description": "- deploy with db - how to use - tests",
+  "main": "run.js",
+  "dependencies": {
+    "mysql2": "^1.6.1",
+    "sequelize": "^4.39.0",
+    "sequelize-cli": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
