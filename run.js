@@ -64,6 +64,7 @@ casper.waitForExec("node", ["save_to_db.js"], function(resp){}, function(timeout
 casper.waitForExec("node", ["send_email.js"], function(resp){}, function(timeout, resp){});
 
 // log
+casper.waitForExec("node", ["log.js"], function(resp){}, function(timeout, resp){});
 
 // finished
 casper.then(function() {

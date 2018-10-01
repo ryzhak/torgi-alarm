@@ -38,7 +38,7 @@ module.exports = {
 };
 
 TODO:
-- send email before save
-- add log
++ send email before save
++ add log
 - add loop of target to run.js
 - update readme
