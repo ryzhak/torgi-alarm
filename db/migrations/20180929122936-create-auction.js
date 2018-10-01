@@ -30,6 +30,10 @@ module.exports = {
       },
       location: {
         type: Sequelize.TEXT
+	  },
+	  isEmailSent: {
+		type: Sequelize.INTEGER,
+		defaultValue: 0
       },
       createdAt: {
         allowNull: false,

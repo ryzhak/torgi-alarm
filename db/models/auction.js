@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     messageNumber: DataTypes.TEXT,
     about: DataTypes.TEXT,
     startPrice: DataTypes.STRING,
-    location: DataTypes.TEXT
+	location: DataTypes.TEXT,
+	isEmailSent: DataTypes.INTEGER
   }, {});
   Auction.associate = function(models) {
     // associations can be defined here
