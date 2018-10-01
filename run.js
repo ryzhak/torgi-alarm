@@ -11,7 +11,7 @@ casper.options.waitTimeout = 45000;
 // for all targets
 // get company inn
 const companyId = 6;
-const categoryId = 8; // Продажа государственного и муниципального имущества
+const categoryId = 8;
 const inn = "2308171570";
 var auctions = [];
 

@@ -8,9 +8,9 @@ module.exports = {
 	EMAIL_TARGET: "spektr-shop@yandex.ru"
 };
 
-- how to use
+- how to use(add company and add to targets)
 - tests
-- run with casperjs run.js
+- run with node load_targets.js && casperjs run.js
 
 add db to db/config/config.js:
 module.exports = {
