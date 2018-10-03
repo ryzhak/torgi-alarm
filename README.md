@@ -10,7 +10,8 @@ module.exports = {
 
 - how to use(add company and add to targets)
 - tests
-- run with node load_targets.js && casperjs run.js
+- run with 
+node load_targets.js && casperjs run.js && node save_to_db.js && node send_email.js && node log.js
 
 add db to db/config/config.js:
 module.exports = {

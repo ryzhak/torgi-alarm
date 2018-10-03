@@ -13,6 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
+	"execute": "node load_targets.js && casperjs run.js && node save_to_db.js && node send_email.js && node log.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
