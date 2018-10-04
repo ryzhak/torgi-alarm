@@ -10,10 +10,11 @@ Parses [torgi.gov.ru](https://torgi.gov.ru) and searches for new auctions. On ne
 5. Log date and number of auctions found via `node log.js`.
 
 ## How to deploy
-1. Install [phantomjs](https://github.com/ariya/phantomjs) globally.
-2. Install [casperjs](http://casperjs.org/) globally.
-3. `npm install`
-4. Add db config file `config.js` to `db/config/config.js`:
+1. Install [nodejs](https://nodejs.org).
+2. Install [phantomjs](https://github.com/ariya/phantomjs) globally.
+3. Install [casperjs](http://casperjs.org/) globally.
+4. `npm install`
+5. Add db config file `config.js` to `db/config/config.js`:
 ```
 const fs = require('fs');
 
@@ -41,7 +42,7 @@ module.exports = {
   }
 };
 ```
-5. Add `env.js` file to the root folder:
+6. Add `env.js` file to the root folder:
 ```
 module.exports = {
 	EMAIL_HOST: "smtp.yandex.ru", // smtp host
@@ -50,8 +51,8 @@ module.exports = {
 	EMAIL_TARGET: "target@yandex.ru" // send notifications to
 };
 ```
-6. From `db` folder run migration via `../node_modules/.bin/sequelize db:migrate`.
-7. From `db` folder run seed script(initial data) via `../node_modules/.bin/sequelize db:seed:all`.
+7. From `db` folder run migration via `../node_modules/.bin/sequelize db:migrate`.
+8. From `db` folder run seed script(initial data) via `../node_modules/.bin/sequelize db:seed:all`.
 
 ## How to run
 ```
