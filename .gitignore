@@ -1,7 +1,6 @@
-auctions.json
+auctions
 db/config/config.js
 env.js
 last.png
 log.txt
 node_modules
-targets.json

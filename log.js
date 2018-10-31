@@ -1,5 +1,11 @@
 const fs = require('fs');
-const auctions = require('./auctions.json');
 
-const text = `${new Date().toString()} Auctions found: ${auctions.length}\n`;
-fs.appendFileSync('log.txt', text);
+fs.readdir("./auctions", (err, files) => {
+	files.forEach(file => {
+		if(file.indexOf(".json") != -1) {
+			var auctions = require(`./auctions/${file}`);
+            var text = `${new Date().toString()} Auctions found: ${auctions.length}\n`;
+            fs.appendFileSync('log.txt', text);
+		}
+	});
+});

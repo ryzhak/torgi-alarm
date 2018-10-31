@@ -9,15 +9,26 @@ casper.options.waitTimeout = 45000;
 
 casper.start();
 
-// for all targets
-var targets = require("targets.json");
+// Ex: casperjs run.js --companyId=1 --categoryId=13 --inn=2312180144
+// get cli parameters
+const companyId = casper.cli.get('companyId');
+const categoryId = casper.cli.get('categoryId');
+const inn = casper.cli.get('inn');
+if(!companyId) throw new Error("companyId can not be null");
+if(!categoryId) throw new Error("categoryId can not be null");
+if(!inn) throw new Error("inn can not be null");
+
+// parse auctions for target
 var auctions = [];
-for(var i = 0; i < targets.length; i++) {
-	parse(targets[i]);
-}
+const target = {
+    companyId: companyId,
+    categoryId: categoryId,
+    inn: inn
+};
+parse(target);
 
 casper.run(function() {
-	fs.write("./auctions.json", JSON.stringify(auctions), 'w');
+	fs.write(`./auctions/auctions_${inn}.json`, JSON.stringify(auctions), 'w');
 	console.log("finished");
 	casper.exit();
 });
