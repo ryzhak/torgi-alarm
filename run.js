@@ -28,7 +28,7 @@ const target = {
 parse(target);
 
 casper.run(function() {
-	fs.write(`./auctions/auctions_${inn}.json`, JSON.stringify(auctions), 'w');
+	fs.write('./auctions/auctions_' + inn + '.json', JSON.stringify(auctions), 'w');
 	console.log("finished");
 	casper.exit();
 });
